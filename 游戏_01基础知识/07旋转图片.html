@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>05 图像</title>
+</head>
+<body>
+
+<div style="width: 480px;margin: auto">
+    <canvas id="myCanvas" width="480" height="700" style="border:1px solid #d3d3d3;">
+    </canvas>
+</div>
+
+
+<script>
+    var canvas =  document.getElementById('myCanvas');
+    var paint =canvas.getContext("2d");
+
+    var wolf = new Image();
+    wolf.src="h2.png";
+    wolf.width=108;
+    wolf.height=101;
+    wolf.onload=function (ev) {
+        var wolfX=90;
+        var wolfY=10;
+
+        paint.save();
+        paint.translate(canvas.width / 2, canvas.height / 2)
+        paint.rotate(90 * Math.PI / 180)
+        paint.translate(-canvas.width / 2, -canvas.height / 2)
+        paint.drawImage(wolf, canvas.width / 2 - wolf.width / 2, canvas.height / 2 - wolf.height / 2)
+        paint.restore();
+
+        paint.drawImage(wolf,wolfX,wolfY,108,101);
+
+    }
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

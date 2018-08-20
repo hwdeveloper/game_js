@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01canvas</title>
+</head>
+<body>
+
+<canvas id="myCanvas" width="200" height="100">
+
+</canvas>
+
+</body>
+
+<script>
+    //获得canvas对象
+    var canvas=document.getElementById("myCanvas");
+    //获得上下文
+    var paint=canvas.getContext("2d");
+    //设置颜色
+    paint.fillStyle="#FF0000";
+    //画出矩形
+    paint.fillRect(0,0,150,75);
+</script>
+</html>

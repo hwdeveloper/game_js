@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>游戏_01地图</title>
+    <script src="Wolf.js"></script>
+    <script src="TimeView.js"></script>
+    <script src="Map.js"></script>
+    <script src="Game.js"></script>
+</head>
+<body>
+<div id="box" style="width: 480px;margin: auto">
+    <canvas id="myCanvas" width="480" height="700" style="border:1px solid #d3d3d3;">
+    </canvas>
+</div>
+</body>
+
+<script>
+
+    //1,创建游戏盒子
+    game = new Game();
+    //2,数据初始化
+    game.init();
+    setInterval('game.run()', 200);
+
+</script>
+</html>

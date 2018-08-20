@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01canvas</title>
+</head>
+<body>
+
+<canvas id="myCanvas" width="500" height="700"></canvas>
+
+</body>
+
+<script>
+    //获得canvas对象
+    var canvas=document.getElementById("myCanvas");
+    //获得上下文
+    var paint=canvas.getContext("2d");
+    paint.moveTo(10,10);
+    paint.lineTo(150,50);
+    paint.lineTo(210,150);
+    paint.lineTo(310,50);
+    paint.stroke();
+</script>
+</html>

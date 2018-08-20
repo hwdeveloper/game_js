@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/Game.js"></script>
+    <script src="js/Map.js"></script>
+    <script src="js/ImgBack.js"></script>
+    <script src="js/Items.js"></script>
+    <script src="js/Content.js"></script>
+    <script src="js/TimeView.js"></script>
+</head>
+<body>
+<div id="box" style="width: 1200px;height:600px;margin: auto;position: relative;">
+    <div style="width: 900px;height: 510px;position: absolute;top:32px;left: 102px;overflow: hidden;z-index: 1">
+        <canvas id="myCanvas" width="900" height="510">
+        </canvas>
+    </div>
+
+</div>
+</body>
+<script>
+    //1,创建游戏盒子
+    game = new Game();
+    //2,数据初始化
+    game.init();
+
+    setInterval('game.run()',200);
+
+</script>
+</html>

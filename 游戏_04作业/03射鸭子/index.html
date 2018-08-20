@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./js/Game.js"></script>
+    <script src="./js/Map.js"></script>
+    <script src="./js/Duck.js"></script>
+    <script src="./js/Gun.js"></script>
+</head>
+<body>
+<div id="box" style="width: 1024px;margin: auto">
+    <canvas id="myCanvas" width="1024" height="770" style="border:1px solid #d3d3d3;">
+    </canvas>
+</div>
+</body>
+<script>
+    //1,创建游戏盒子
+    game = new Game();
+    //2,数据初始化
+    game.init();
+    setInterval('game.run()', 30);
+</script>
+</html>
